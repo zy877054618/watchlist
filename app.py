@@ -108,9 +108,9 @@ def delete(movie_id):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        if not current_user.is_authenticated:  # 如果当前用户未认证
-            username = request.form['username']
-            password = request.form['password']
+        # if not current_user.is_authenticated:  # 如果当前用户未认证
+        username = request.form['username'] 
+        password = request.form['password']
 
         if not username or not password:
             flash('Invalid input.')
